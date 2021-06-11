@@ -1,0 +1,30 @@
+uuid: dd0f5e0f-f3ce-4a1b-b822-ed52eb063cc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_favorite_activities
+    - taxonomy.vocabulary.activities
+  module:
+    - user
+id: user.user.field_favorite_activities
+field_name: field_favorite_activities
+entity_type: user
+bundle: user
+label: 'Favorite activities'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      activities: activities
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
